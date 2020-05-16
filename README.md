@@ -40,3 +40,4 @@ What doesn't work:
 
 What I want to try:
 - [ ] Pygame specific containers on DockerHub
+- [ ] Look into how this [guy's](https://gitlab.com/pythonfoo/python3-pygame-docker/-/tree/master) docker container worked.
