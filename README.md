@@ -23,7 +23,7 @@ So I'm currently trying to put this into a docker container.
 
 I'm currently using the `python:3.6-slim` image to build my container off of.
 
-This is what I learned so far as of today (May 16,2020):
+This is what I learned so far as of today (May 19,2020):
 * How to start a Dockerfile (see [here](Dockerfile)!)
 * That each `RUN` command in the Dockerfile opens up a new bash terminal inside the computer.
 * `ENTRYPOINT` allows you to point out starting point to start at.
@@ -32,6 +32,10 @@ This is what I learned so far as of today (May 16,2020):
   * bash: `ctrl + d` twice or `exit`
   * Python: `exit()`
 * If you're copying folders from your local drive into the container, you need to specify a folder or they get copied in as individual files.....
+* The difference between `ADD` and `COPY` in a Dockerfile. [link](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#add-or-copy)
+  * `COPY` is used basic copying of local files into a container.
+  * `ADD` is like `COPY` with the extra bonus of being able to extract tar files and to pull files from remote URLs. (It seems the remote URL thing is not recommended)
+  * Use `COPY` unless dealing with tar files. 
 
 What doesn't work:
 * Well the game doesn't run in the current container.
